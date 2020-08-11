@@ -15,7 +15,7 @@ public class ReceiptRecyclerViewAdapter extends RecyclerView.Adapter<ReceiptRecy
 
     private Receipt[] receipts;
     private Activity activity;
-    //TODO
+    //TODO 3.1(2,5)
     //Membuat variabel penampung untuk title receipt yang "checked"
 
     public ReceiptRecyclerViewAdapter(Receipt[] receipts, Activity activity) {
@@ -23,7 +23,7 @@ public class ReceiptRecyclerViewAdapter extends RecyclerView.Adapter<ReceiptRecy
         this.activity = activity;
     }
 
-    //TODO
+    //TODO 3.2(5)
     //Membuat fungsi yang mengembalikan list title receipt yang "checked"
 
     @NonNull
@@ -51,7 +51,7 @@ public class ReceiptRecyclerViewAdapter extends RecyclerView.Adapter<ReceiptRecy
             @Override
             public void onClick(View v) {
                 holder.itemCard.setChecked(!holder.itemCard.isChecked());
-                //TODO
+                //TODO 3.4(2,5)
                 //Fungsi untuk menambah ataupun menghapus dipanggil disini
             }
         });
@@ -62,7 +62,7 @@ public class ReceiptRecyclerViewAdapter extends RecyclerView.Adapter<ReceiptRecy
         return receipts.length;
     }
 
-    //TODO
+    //TODO 3.3(10)
     //Membuat fungsi untuk menambahkan title receipt yang checked dan menghapus yang unchecked
 
     static class ReceiptViewHolder extends RecyclerView.ViewHolder {

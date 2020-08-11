@@ -33,23 +33,23 @@ public class MainActivity extends AppCompatActivity {
         checkedFloatBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                //TODO 4.1(2,5)
                 //Melakukan inisialisasi "checked" yang didapat dari fungsi yang berada pada recyclerViewAdapter
                 //checked = recyclerViewAdapter. ....
                 if (checked.isEmpty()){
                     Toast.makeText(v.getContext(), "Just check, please!", Toast.LENGTH_SHORT).show();
                 }else {
-                    //TODO
+                    //TODO 4.4(2,5)
                     //Fungsi menampilkan dialog dipanggil disini
                 }
             }
         });
     }
 
-    //TODO
+    //TODO 4.2(10)
     //Menampilkan simple dialog yang menampilkan title receipt yang checked
 
-    //TODO
+    //TODO 4.3(5)
     //Apa maksud fungsi ini ? (2 kalimat)
     //Jawaban :
     //
