@@ -1,0 +1,17 @@
+<resources>
+    <!-- Base application theme. -->
+    <!--TODO-->
+    <!--Melakukan perubahan parent MaterialComponent-->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">@string/receipt_title</item>
+    </style>
+
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Material Design</string>
+    <string name="receipt_image">Receipt Image</string>
+
+    <!--TODO-->
+    <!--Mengubah XXXX menjadi NPM masing-masing-->
+    <string name="receipt_title">Receipt_XXXX</string>
+    <string name="show_checked">Show Checked</string>
+
+</resources>
