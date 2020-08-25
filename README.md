@@ -2,7 +2,7 @@
 
 Hei 🌻
 
-In this repo found TODO task then do it clearly and you'll get 55 points.
+In this repo found TODO task then do it clearly and you'll get 60 points.
 Thank you.
 
 # purpose
