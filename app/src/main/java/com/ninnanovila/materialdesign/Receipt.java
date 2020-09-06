@@ -9,7 +9,8 @@ public class Receipt {
 
     //TODO
     //Apa perbedaan dua construtor berikut ? (Jawab dgn 2 kalimat)
-    //Jawaban :
+    //Jawaban : perbedaanya tidak adanya parameter. yang constructor bawahan menampung
+    //          1 kesatuan receipt yang berisi 3 variabel pendukungnya.
     //
     //
     public Receipt() {

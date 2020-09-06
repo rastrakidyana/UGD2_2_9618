@@ -1,8 +1,11 @@
 package com.ninnanovila.materialdesign;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,12 +38,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //TODO 4.1(2,5)
                 //Melakukan inisialisasi "checked" yang didapat dari fungsi yang berada pada recyclerViewAdapter
-                //checked = recyclerViewAdapter. ....
+                checked = recyclerViewAdapter.getTitle_checked();
+
                 if (checked.isEmpty()){
                     Toast.makeText(v.getContext(), "Just check, please!", Toast.LENGTH_SHORT).show();
                 }else {
                     //TODO 4.4(2,5)
                     //Fungsi menampilkan dialog dipanggil disini
+                    simple_dialog();
                 }
             }
         });
@@ -48,10 +53,22 @@ public class MainActivity extends AppCompatActivity {
 
     //TODO 4.2(10)
     //Menampilkan simple dialog yang menampilkan title receipt yang checked
+    public void simple_dialog(){
+        final CharSequence[] item = getStringArray(checked);
+        AlertDialog.Builder ad = new AlertDialog.Builder(this);
+        ad.setTitle("Checked Receipts").setItems(item, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        ad.show();
+    }
 
     //TODO 4.3(5)
     //Apa maksud fungsi ini ? (2 kalimat)
-    //Jawaban :
+    //Jawaban : untuk menampung hasil checked ke dalam array. kemudian fungsi tersebut
+    //          digunakan untuk menampilkan pada saat menekan show checked.
     //
     //
     public static String[] getStringArray(List<String> input) {

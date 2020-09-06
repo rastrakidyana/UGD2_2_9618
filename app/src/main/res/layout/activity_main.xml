@@ -33,7 +33,11 @@
 
     <!--TODO 2.1(5)-->
     <!--Menjelaskan maksud dari layout recyclerview, langsung dikerjakan disini ya.-->
-    <!--Jawaban :
+    <!--Jawaban : layout recyclerview merupakan versi modern dari listview.
+                  recylerview digunakan menampilkan daftar scroll elemen berdasarkan set data berukuran besar,
+                  dan terisi otomatis dengan tampilan tata letak yang telah tentukan, seperti LinearLayoutManager GridLayoutManager,
+                  atau bisa mengimplementasikan pengelola tata letak sesuai kehendak.
+                  contoh recyclerview adalah menu di gmail seperti di inboxnya.
 
 
     -->

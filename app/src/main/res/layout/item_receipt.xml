@@ -14,7 +14,12 @@
 
     <!--TODO 2.2(2,5)-->
     <!--Apa yang kamu ketahui tentang MaterialCardView dan fitur-fiturnya?-->
-    <!--Jawaban :
+    <!--Jawaban : MaterialCardView berfungsi sebagai wrapper/frame layout yang membungkus layout di dalamnya
+                  yang desainnya menyerupai kartu.
+                  fitur-fiturnya :
+                  1. Making a card checkable, jika kartu sudah dicek maka akan muncul tanda cek di karu tersebut.
+                  2. Making a card draggable, kartu dapat di drag kemanapun sesaui layout utama.
+                  selain itu untuk style ada rounded corner dan shadow untuk efek elevation.
 
 
     -->

@@ -6,10 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.google.android.material.card.MaterialCardView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReceiptRecyclerViewAdapter extends RecyclerView.Adapter<ReceiptRecyclerViewAdapter.ReceiptViewHolder> {
 
@@ -17,6 +22,7 @@ public class ReceiptRecyclerViewAdapter extends RecyclerView.Adapter<ReceiptRecy
     private Activity activity;
     //TODO 3.1(2,5)
     //Membuat variabel penampung untuk title receipt yang "checked"
+    private List<String> title_checked = new ArrayList<>();
 
     public ReceiptRecyclerViewAdapter(Receipt[] receipts, Activity activity) {
         this.receipts = receipts;
@@ -25,6 +31,9 @@ public class ReceiptRecyclerViewAdapter extends RecyclerView.Adapter<ReceiptRecy
 
     //TODO 3.2(5)
     //Membuat fungsi yang mengembalikan list title receipt yang "checked"
+    public List<String> getTitle_checked() {
+        return  title_checked;
+    }
 
     @NonNull
     @Override
@@ -53,6 +62,14 @@ public class ReceiptRecyclerViewAdapter extends RecyclerView.Adapter<ReceiptRecy
                 holder.itemCard.setChecked(!holder.itemCard.isChecked());
                 //TODO 3.4(2,5)
                 //Fungsi untuk menambah ataupun menghapus dipanggil disini
+                int pos = holder.getAdapterPosition();
+                if(holder.itemCard.isChecked()==true){
+                    Toast.makeText(v.getContext(), "Input: "+receipts[position].getTitle(), Toast.LENGTH_SHORT).show();
+                    addDelete (position, true);
+                }else{
+                    Toast.makeText(v.getContext(), "Delete: "+receipts[position].getTitle(), Toast.LENGTH_SHORT).show();
+                    addDelete (position, false);
+                }
             }
         });
     }
@@ -64,6 +81,14 @@ public class ReceiptRecyclerViewAdapter extends RecyclerView.Adapter<ReceiptRecy
 
     //TODO 3.3(10)
     //Membuat fungsi untuk menambahkan title receipt yang checked dan menghapus yang unchecked
+    public void addDelete (int position, boolean check){
+        if (check==true){
+            title_checked.add(receipts[position].getTitle());
+        } else {
+            title_checked.remove(receipts[position].getTitle());
+        }
+    }
+
 
     static class ReceiptViewHolder extends RecyclerView.ViewHolder {
 
